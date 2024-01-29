@@ -8,6 +8,7 @@ const everyNMinutes = (n: number) => ({
   },
 });
 
+export const every1Minute = everyNMinutes(1);
 export const every5Minutes = everyNMinutes(5);
 export const every10Minutes = everyNMinutes(10);
 
