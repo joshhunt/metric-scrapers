@@ -31,7 +31,7 @@ export async function exarotonCollector(): Promise<Point[]> {
       .timestamp(new Date())
       .tag("id", creditPool.id)
       .tag("name", creditPool.name)
-      .intField("status", creditPool.credits);
+      .intField("credits", creditPool.credits);
 
     metrics.push(point);
   }
