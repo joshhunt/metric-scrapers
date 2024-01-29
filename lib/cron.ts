@@ -2,11 +2,14 @@ import { CollectorFn } from "../types.ts";
 import { collectMetrics } from "./collectMetrics.ts";
 import { getEnvVar } from "./env.ts";
 
-export const every10Minutes = {
+const everyNMinutes = (n: number) => ({
   minute: {
-    every: 10,
+    every: n,
   },
-};
+});
+
+export const every5Minutes = everyNMinutes(5);
+export const every10Minutes = everyNMinutes(10);
 
 export function cronJob(
   name: string,
